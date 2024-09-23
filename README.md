@@ -1,4 +1,4 @@
 # mysql-prometheus-sandbox
-bash```
+```bash
 sudo docker compose up
 ```
