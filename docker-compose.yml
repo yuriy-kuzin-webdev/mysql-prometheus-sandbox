@@ -35,7 +35,7 @@ services:
       - './grafana:/etc/grafana/provisioning/datasources'
 
   mysql_exporter:
-    image: prom/mysqld_exporter
+    image: prom/mysqld-exporter
     command: 
       - '--config.my-cnf=/cfg/.my.cnf'
       - '--mysqld.address=192.168.178.26:3306'
