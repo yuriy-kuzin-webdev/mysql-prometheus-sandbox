@@ -20,3 +20,5 @@ sudo docker exec -it mysql mysql -h 127.0.0.1 -u root -p
 
 ### notes
 You may need to adjust IP address in yml files
+<br/>
+For the first run there is need to add prometheus as datasource in Grafana
