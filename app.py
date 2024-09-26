@@ -73,7 +73,7 @@ def simulate_operations():
             read_data(cursor)             
             print("----- Loop End -----\n")
             
-            # time.sleep(5)
+            time.sleep(5)
     except KeyboardInterrupt:
         print("Stopped the simulation.")
 

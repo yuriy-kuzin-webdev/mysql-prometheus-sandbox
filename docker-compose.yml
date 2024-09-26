@@ -19,6 +19,7 @@ services:
 
   prometheus:
     image: prom/prometheus
+    container_name: prometheus
     volumes:
       - "./prometheus.yml:/etc/prometheus/prometheus.yml"
     ports:
@@ -38,9 +39,10 @@ services:
       
   mysql-exporter:
     image: prom/mysqld-exporter
+    container_name: mysqld-exporter
     command: 
      - --config.my-cnf=/cfg/.my.cnf
-     - --mysqld.address=192.168.178.26:3306
+     - --mysqld.address=mysql:3306
     volumes:
       - "./.my.cnf:/cfg/.my.cnf"
     ports:
@@ -50,6 +52,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    container_name: db-operations
     depends_on:
       - mysql
     environment:

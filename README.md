@@ -2,7 +2,7 @@
 
 ### run
 ```bash
-sudo docker compose -f prometheus-mysql.yml up
+sudo docker compose up --build
 ```
 ### connect to mysql
 ```bash
@@ -18,7 +18,5 @@ sudo docker exec -it mysql mysql -h 127.0.0.1 -u root -p
 ### prometheus
 [http://localhost:9090/](http://localhost:9090/)
 
-### notes
-You may need to adjust IP address in yml files
 <br/>
 For the first run there is need to add prometheus as datasource in Grafana
